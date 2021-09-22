@@ -51,6 +51,13 @@
     #sidebar.active {
         margin-left: -250px;
     }
+
+    .form-custom {
+        padding: 5px 10px;
+
+        border-radius: 5px;
+
+    }
     </style>
 
 </head>
@@ -67,7 +74,7 @@
         <ul  style="text-align: center; list-style-type: none;">
 
             <li class=" wrap-item"><g:link controller="profile"> User Profile</g:link></li>
-            <li class=" wrap-item"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Change Password</button></li>
+            <li class=" wrap-item"><a type="button"  data-toggle="modal" data-target="#myModal"> Change Password</a></li>
         </ul>
     </nav>
 
@@ -129,13 +136,13 @@
         <div class="modal-content">
             <div class="modal-header">
 
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Change Password</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <g:form class="row rounded" method="POST" controller="profile" action="changePassword">
-                    <g:textField name="currpass" id="currpass" placeholder="current password" type="password" /><br>
-                    <g:textField name="newpass" id="newpass" placeholder="new password" type="password" /><br>
+                <g:form class="form-signin p-1" method="POST" controller="profile" action="changePassword">
+                    <g:textField class="form-custom" name="currpass" id="currpass" placeholder="current password" type="password" /><br>
+                    <g:textField class="form-custom" name="newpass" id="newpass" placeholder="new password" type="password" /><br>
                     <g:submitButton name="Submit" type="submit"/>
                 </g:form>
             </div>

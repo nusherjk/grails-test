@@ -15,6 +15,7 @@ class AdminController {
         respond (['user':currUser, 'alluser':allUserset])
 
     }
+
     def String wrapSearchParm(value) {
         '%'+value+'%'
     }
@@ -22,7 +23,7 @@ class AdminController {
     def searchbyname(params){
 
         def list = User.findAllByFirstnameIlike(wrapSearchParm(params.value))
-        System.out.println(list)
+        //System.out.println(list)
         //render list as JSON
         render(template:'searchr', model:[alluser: list])
         //render "success" as JSON

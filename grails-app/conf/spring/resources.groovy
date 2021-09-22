@@ -15,4 +15,5 @@ beans = {
         targetUrlParameter = application.config.grails.plugin.springsecurity.successHandler.targetUrlParameter
         useReferer = application.config.grails.plugin.springsecurity.successHandler.useReferer
     }
+
 }
