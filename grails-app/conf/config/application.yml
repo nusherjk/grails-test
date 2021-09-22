@@ -1,0 +1,18 @@
+---
+
+dataSource:
+  pooled: true
+  jmxExport: true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  dbCreate: update
+  username: root
+  password: ''
+
+environments:
+    development:
+      dataSource:
+        dbCreate: update
+        url: jdbc:mysql://localhost:3306/grailstest
+
+
